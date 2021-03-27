@@ -1,5 +1,3 @@
-// arquivo referente a entidade/model de Specification
-
 import { v4 as uuidV4 } from "uuid";
 
 class Specification {
