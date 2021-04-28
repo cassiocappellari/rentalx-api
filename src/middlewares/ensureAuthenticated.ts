@@ -34,6 +34,11 @@ export async function ensureAuthenticated(
       throw new AppError("user not found", 401);
     }
 
+    // tipagem de 'user' foi adicionada ao Request do Express, tornando-o disponível para uso na aplicação
+    req.user = {
+      id: userId,
+    };
+
     next();
   } catch {
     throw new AppError("invalid token", 401);
